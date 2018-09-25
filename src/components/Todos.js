@@ -7,11 +7,12 @@ import '../App.css';
 const Todos = () => (
   <Query
     query={gql`
-      query fetchTodoQuery {
+      {
         todos {
           id
-          todos_name
+          todo_name
           time
+          completed
         }
       }
     `}

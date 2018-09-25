@@ -1,10 +1,10 @@
 import React from 'react';
 import '../App.css';
 
-const Todo = (props) => {
+const Todo = (props) => (
   <div className="todos">
-    {`${props.data.todos_name} created on ${props.data.time}`}
+    <p>{`${props.data.todo_name} created on ${props.data.time}`}</p>
   </div>
-}
+)
 
 export default Todo;

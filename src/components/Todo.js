@@ -2,8 +2,9 @@ import React from 'react';
 import '../App.css';
 
 const Todo = (props) => (
-  <div className="todos">
-    <p>{`${props.data.todo_name} created on ${props.data.time}`}</p>
+  <div className="todos jumbotron">
+    <h2>{`${props.data.todo_name}`}</h2>
+    <h5>{`created on ${props.data.time}`}</h5>
   </div>
 )
 

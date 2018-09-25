@@ -20,12 +20,12 @@ const Todos = () => (
   {
     ({ loading, error, data }) => {
       if(loading)
-        return <p>Loading...</p>;
+        return <p className="todo-list">Loading...</p>;
       if(error)
-        return <p>Error </p>;
+        return <p className="todo-list">Error </p>;
 
       return data.todos.map((todo) => (
-        <div key={todo.id}>
+        <div key={todo.id} className="todo-list">
           <Todo data={todo} />
         </div>
       ))

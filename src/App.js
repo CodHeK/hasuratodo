@@ -14,8 +14,13 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div className="App container">
-          <h1>Add your todos</h1>
-          <Todos />
+          <h1 className="title">todos</h1>
+          <div className="col-md-2"></div>
+          <div className="col-md-8">
+            <input type="text" className="form-control inp-todo" placeholder="add your todo..." />
+            <Todos />
+          </div>
+          <div className="col-md-2"></div>
         </div>
       </ApolloProvider>
     );

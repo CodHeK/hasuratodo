@@ -2,3 +2,27 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
+
+.title {
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.todos {
+  margin-top: 2em;
+  height: auto;
+}
+
+.todo-list {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.inp-todo {
+  margin-top: 3em;
+}
+
+.container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

@@ -26,10 +26,14 @@
   cursor: pointer;
 }
 
-.todo-list {
+.todo-list, .todo-list-completed {
   text-align: center;
   margin: 0 auto;
   margin-top: 2em;
+}
+
+.todo-list-completed h3 {
+  text-decoration: line-through;
 }
 
 .inp-todo {

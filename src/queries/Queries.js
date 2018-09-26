@@ -2,7 +2,10 @@ import gql from "graphql-tag";
 
 export const FetchAllQuery = gql`
   {
-    todos {
+    todos (
+      where: { completed: { _eq: false }},
+      order_by: id_desc
+    ) {
       id
       todo_name
       completed
@@ -21,6 +24,30 @@ export const AddTodoQuery = gql`
         id
         todo_name
       }
+    }
+  }
+`;
+
+export const MarkCompletedQuery = gql`
+  mutation mark($id: Int!) {
+    update_todos(
+      where: {id: { _eq: $id }},
+      _set: { completed: true }
+    ) {
+      affected_rows
+    }
+  }
+`;
+
+export const getCompletedQuery = gql`
+  {
+    todos(
+      where: { completed: {_eq: true }},
+      order_by: id_desc
+    ) {
+      id
+      todo_name
+      completed
     }
   }
 `;

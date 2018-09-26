@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Query } from "react-apollo";
-import { FetchAllQuery, AddTodoQuery } from '../queries/Queries';
+import { FetchAllQuery, AddTodoQuery, CompletedTodos, getCompletedQuery } from '../queries/Queries';
 import { Mutation } from "react-apollo";
 import '../App.css';
 
@@ -9,8 +9,9 @@ class AddTodo extends Component {
     if(e.which === 13) {
       addTodo({
         variables: { todo_name: e.target.value },
-        refetchQueries: [{ query: FetchAllQuery }]
+        refetchQueries: [{ query: FetchAllQuery }, { query: getCompletedQuery }]
       });
+      e.target.value = "";
     }
   }
   render () {

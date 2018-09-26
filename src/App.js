@@ -3,6 +3,7 @@ import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
+import CompletedTodos from './components/CompletedTodos';
 import './App.css';
 
 const client = new ApolloClient({
@@ -20,6 +21,7 @@ class App extends Component {
           <div className="col-md-8">
             <AddTodo />
             <Todos />
+            <CompletedTodos />
           </div>
           <div className="col-md-2"></div>
         </div>

@@ -51,3 +51,13 @@ export const getCompletedQuery = gql`
     }
   }
 `;
+
+export const deleteQuery = gql`
+  mutation del($id: Int!) {
+    delete_todos(
+      where: {id: { _eq: $id }}
+    ) {
+      affected_rows
+    }
+  }
+`;

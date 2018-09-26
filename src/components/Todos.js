@@ -7,9 +7,7 @@ import '../App.css';
 import TodoLoader from '../Loaders/TodoLoader';
 
 const Todos = () => (
-  <Query
-    query={FetchAllQuery}
-  >
+  <Query query={FetchAllQuery}>
   {
     ({ loading, error, data }) => {
       if(loading)

@@ -4,7 +4,9 @@ import '../App.css';
 
 const TodoLoader = () => (
   <div className="todo-loader">
-    <img src={loader} />
+    <img src={loader} width="50" height="50"/>
+    <br /><br />
+    <h4>Fetching the todos for you</h4>
   </div>
 )
 

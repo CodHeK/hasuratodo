@@ -2,25 +2,18 @@ import React, { Component } from 'react';
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Todo from './Todo';
+import { FetchAllQuery } from '../queries/Queries';
 import '../App.css';
+import TodoLoader from '../Loaders/TodoLoader';
 
 const Todos = () => (
   <Query
-    query={gql`
-      {
-        todos {
-          id
-          todo_name
-          time
-          completed
-        }
-      }
-    `}
+    query={FetchAllQuery}
   >
   {
     ({ loading, error, data }) => {
       if(loading)
-        return <p className="todo-list">Loading...</p>;
+        return <TodoLoader />
       if(error)
         return <p className="todo-list">Error </p>;
 

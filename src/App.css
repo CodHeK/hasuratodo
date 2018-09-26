@@ -1,6 +1,13 @@
+/* .container-fluid {
+  background: url('./assets/bg2.png');
+  height: 100%;
+  https://www.transparenttextures.com/
+} */
+
 .App {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+
 }
 
 .title {
@@ -9,20 +16,54 @@
 }
 
 .todos {
-  margin-top: 2em;
-  height: auto;
+  height: 75px;
+  border: 1px solid black;
+  border-radius: 10px;
+  line-height: 75px;
+}
+
+.todos:hover {
+  cursor: pointer;
 }
 
 .todo-list {
   text-align: center;
   margin: 0 auto;
+  margin-top: 2em;
 }
 
 .inp-todo {
   margin-top: 3em;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
 }
 
 .container {
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+.inp-todo {
+  height: 50px;
+  font-weight: 400;
+  font-size: 17px
+}
+
+.cross {
+  color: black;
+  font-size: 18px;
+  float: right;
+  position: relative;
+  margin-left: 3em;
+}
+
+.cross:hover {
+  cursor: pointer;
+}
+
+.todo-loader {
+  margin-top: 3em;
 }

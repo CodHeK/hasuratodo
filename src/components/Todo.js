@@ -2,9 +2,9 @@ import React from 'react';
 import '../App.css';
 
 const Todo = (props) => (
-  <div className="todos jumbotron">
-    <h2>{`${props.data.todo_name}`}</h2>
-    <h5>{`created on ${props.data.time}`}</h5>
+  <div className="todos">
+    <i className="fas fa-times-circle cross"></i>
+    <h3>{`${props.data.todo_name}`}</h3>
   </div>
 )
 

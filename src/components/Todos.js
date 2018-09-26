@@ -16,7 +16,7 @@ const Todos = () => (
         return <p className="todo-list">Error </p>;
 
       return data.todos.map((todo) => (
-        <div key={todo.id} className="todo-list">
+        <div key={todo.id} className="todo-list" data-toggle="tooltip" data-placement="left" title="click to mark completed">
           <Todo data={todo} />
         </div>
       ))

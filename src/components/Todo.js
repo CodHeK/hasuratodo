@@ -11,7 +11,6 @@ class Todo extends Component {
 
   completedTask(id, mark, e) {
     $("#" + id + " h3").css({ 'text-decoration': 'line-through'});
-    console.log(id);
     mark({
       variables: { id: id },
       refetchQueries: [{ query: FetchAllQuery }, { query: getCompletedQuery }]
@@ -24,7 +23,7 @@ class Todo extends Component {
         {
           (mark, { data }) => (
             <div className="todos" onClick={this.completedTask.bind(this, this.props.data.id, mark)} id={this.props.data.id}>
-              <i className="fas fa-times-circle cross"></i>
+              <i className="fas fa-times-circle cross" data-toggle="tooltip" data-placement="top" title="click to delete"></i>
               <h3>{`${this.props.data.todo_name}`}</h3>
             </div>
           )

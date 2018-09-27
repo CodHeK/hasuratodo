@@ -16,7 +16,7 @@ const Todos = () => (
         return <p className="todo-list">Error </p>;
 
       if(data.todos.length == 0)
-        return <h3 className="todo-list">No todos to show :\/ </h3>;
+        return <h3 className="todo-list">No todos to complete :\/ </h3>;
 
       return data.todos.map((todo) => (
         <div key={todo.id} className="todo-list" data-toggle="tooltip" data-placement="left" title="click to mark completed">

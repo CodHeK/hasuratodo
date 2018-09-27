@@ -7,7 +7,18 @@
 .App {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+}
 
+.title-home {
+  margin-top: 10%;
+  font-size: 75px;
+  font-weight: 700;
+}
+
+.navbar {
+  border: 0;
+  background-color: transparent;
+  color: black;
 }
 
 .title {

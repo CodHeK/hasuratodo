@@ -21,6 +21,7 @@ class AddTodo extends Component {
           (addTodo, { data }) => (
             <div>
               <input type="text" className="form-control inp-todo" placeholder="add your todo..." onKeyPress={this.addnewTodo.bind(this, addTodo)} />
+              <h4>( Click todo to mark as completed )</h4>
             </div>
           )
         }

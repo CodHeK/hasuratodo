@@ -8,22 +8,16 @@ import Navbar from './components/Navbar';
 import './App.css';
 
 const ACCESS_TOKEN = localStorage.getItem('access_token');
-const Authr = 'Bearer '.concat(ACCESS_TOKEN);
+// const Authr = 'Bearer '.concat(ACCESS_TOKEN);
 
 const client = new ApolloClient({
   uri: "https://hasuratodo.herokuapp.com/v1alpha1/graphql",
   headers: {
-    'Authorization': Authr,
-    'X-Hasura-Access-Key': 'gagan30101998',
+    Authorization: `Bearer ${ACCESS_TOKEN}`,
   }
 })
 
-
 class Content extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     const { isAuthenticated } = this.props.auth;
     return (

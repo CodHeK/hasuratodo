@@ -9,20 +9,24 @@ export const FetchAllQuery = gql`
       id
       todo_name
       completed
+      user_id
     }
   }
 `;
 
 export const AddTodoQuery = gql`
-  mutation addTodo($todo_name: String!) {
+  mutation addTodo($todo_name: String!, $user_id: String!) {
     insert_todos(objects: [
       {
-        todo_name: $todo_name
+        todo_name: $todo_name,
+        user_id: $user_id
       }
     ]) {
       returning {
         id
         todo_name
+        completed
+        user_id
       }
     }
   }
@@ -48,6 +52,7 @@ export const getCompletedQuery = gql`
       id
       todo_name
       completed
+      user_id
     }
   }
 `;

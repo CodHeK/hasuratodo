@@ -18,6 +18,7 @@ export default class Auth {
     this.isAuthenticated = this.isAuthenticated.bind(this);
   }
 
+
   login() {
     this.auth0.authorize();
   }
@@ -40,6 +41,7 @@ export default class Auth {
     let expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
+    localStorage.setItem('sub', authResult.idTokenPayload.sub);
     localStorage.setItem('expires_at', expiresAt);
     // navigate to the home route
     history.replace('/');

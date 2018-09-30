@@ -5,10 +5,16 @@ import { Mutation } from "react-apollo";
 import '../App.css';
 
 class AddTodo extends Component {
+  getUser() {
+    const sub = localStorage.getItem('sub');
+    return sub;
+  }
+
   addnewTodo(addTodo, e) {
     if(e.which === 13) {
+      const user_id = this.getUser();
       addTodo({
-        variables: { todo_name: e.target.value },
+        variables: { todo_name: e.target.value, user_id: user_id },
         refetchQueries: [{ query: FetchAllQuery }, { query: getCompletedQuery }]
       });
       e.target.value = "";

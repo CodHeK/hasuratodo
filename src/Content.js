@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import './App.css';
 
 const ACCESS_TOKEN = localStorage.getItem('access_token');
-// const Authr = 'Bearer '.concat(ACCESS_TOKEN);
 
 const client = new ApolloClient({
   uri: "https://hasuratodo.herokuapp.com/v1alpha1/graphql",
